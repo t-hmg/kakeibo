@@ -1,0 +1,84 @@
+body {
+  font-family: "メイリオ", "Hiragino Kaku Gothic ProN";
+  font-size: 16px;
+}
+#contents {
+  width: 750px;
+  margin: 0 auto;
+}
+/* ========GROVAL NAVI======== */
+#navi {
+  width: 750px;
+  height: 40px;
+  background: #d1d1d1;
+  background: linear-gradient(to top, #afafaf, #d1d1d1);
+  display: table-cell;
+  vertical-align: middle;
+}
+#lnk_home {
+  margin-left: 10px;
+}
+#lnk_logout {
+  margin-right: 10px;
+  float: right;
+}
+/* ========TABLE======== */
+.g_tbl_1 {
+  border: 1px gray solid;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.g_tbl_1 th {
+  background: #d1d1d1;
+  font-weight: normal;
+  background: linear-gradient(to top, #afafaf, #d1d1d1);
+}
+.g_tbl_1 th,
+.g_tbl_1 td {
+  height: 2em;
+  padding: 0 5px 0 5px;
+  border-bottom: 1px gray solid;
+}
+.g_tbl_1 th + th,
+.g_tbl_1 td + td {
+  border-left: 1px gray solid;
+}
+.g_tbl_1 tr:last-child th,
+.g_tbl_1 tr:last-child td {
+  border-bottom: none;
+}
+/* ========BUTTON======== */
+.g_btn_1 {
+  font-family: "メイリオ", "Hiragino Kaku Gothic ProN";
+  font-size: 16px;
+  color: black;
+  border: 1px gray solid;
+  border-radius: 4px;
+  background: #d1d1d1;
+  background: linear-gradient(to top, #afafaf 50%, #d1d1d1 50%);
+}
+.g_btn_1:hover,
+.g_btn_1:focus {
+  border: 1px #bbbbbb solid;
+}
+/* ========TEXT======== */
+.g_txt_1 {
+  font-size: 16px;
+  font-family: "メイリオ", "Hiragino Kaku Gothic ProN";
+	padding: 5px;
+	border: 1px gray solid;
+	border-radius: 5px;
+	background: #f0f0f0;
+	background: linear-gradient(to top, #f0f0f0, #fff);
+}
+.g_txt_1:hover,
+.g_txt_1:focus {
+	border-color: #a3bfbf;
+	box-shadow: 0px 0px 6px #23d0ce;
+}
+/* ========RESPONSIVE DESIGN======== */
+@media screen and (max-width:749px) {
+  #contents {width: 100%;}
+}
