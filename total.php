@@ -48,11 +48,19 @@
 ?>
 <?php
 
-  // データ抽出期間を求める
-  if (isset($_GET['month'])) {
-    $month = $_GET['month'];
-    $date_start = date('Y-m-d', strtotime($month . '-01'));
+  $month = isset($_GET['month']) ? $_GET['month'] : "";
+
+  // ＧＥＴ引数に意図しない値が設定されている場合は
+  // 強制的にログアウトする
+  $arg_err = false;
+  list($yy, $mm) = explode('-', $month);
+  if (checkdate($mm, 1, $yy) === false) {$arg_err = true;}
+  if ($arg_err === true) {
+    header('Location:login.php?message=bad_request'); exit;
   }
+
+  // データ抽出期間を求める
+  $date_start = date('Y-m-d', strtotime($month . '-01'));
   $date_end = date('Y-m-t', strtotime($date_start));
 
   // ＤＢ接続
@@ -115,11 +123,11 @@
     </tr>
     <tr>
       <?php
-        print '<td><a href="list.php
-               ?himoku_kubun=0&month='. htmlentities($month) .'">￥'.
+        print '<td><a href="list.php?himoku_kubun=0&month='.
+               htmlentities($month) .'">￥'.
                number_format(htmlentities($total_income)). '</td><td>－</td>';
-        print '<td><a href="list.php
-               ?himoku_kubun=1&month='. htmlentities($month) .'">￥'.
+        print '<td><a href="list.php?himoku_kubun=1&month='.
+               htmlentities($month) .'">￥'.
                number_format(htmlentities($total_expense)). '</td><td>＝</td>';
         print '<td>￥'. number_format(htmlentities($total_income - $total_expense)) .'</td>';
       ?>

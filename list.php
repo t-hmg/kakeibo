@@ -35,9 +35,23 @@
 
   $himoku_kubun = isset($_GET['himoku_kubun']) ? $_GET['himoku_kubun'] : "";
   $himoku_id = isset($_GET['himoku_id']) ? $_GET['himoku_id'] : "";
+  $month = isset($_GET['month']) ? $_GET['month'] : "";
+
+  // ＧＥＴ引数に意図しない値が設定されている場合は
+  // 強制的にログアウトする
+  $arg_err = false;
+  list($yy, $mm) = explode('-', $month);
+  if (checkdate($mm, 1, $yy) === false) {$arg_err = true;}
+  if ($arg_err === true) {
+    header('Location:login.php?message=bad_request'); exit;
+  }
+
+  list($yy, $mm) = explode('-', $month);
+  if (checkdate($mm, 1, $yy) === false) {
+    header('Location:login.php?message=bad_request'); exit;
+  }
 
   // データ抽出期間を求める
-  $month = isset($_GET['month']) ? $_GET['month'] : "";
   $date_start = $month . '-01';
   $date_end = date('Y-m-t', strtotime($date_start));
 
@@ -93,8 +107,8 @@
         print '<td id="date">'. date('Y/m/d', strtotime($row['date'])) .'</td>';
         print '<td>('. $weekday[date('w', strtotime($row['date']))] .')</td>';
         print '<td>'. htmlentities($row['himoku_name']) .'</td>';
-        print '<td><a href="input.php
-               ?kakei_id='. htmlentities($row['kakei_id']) . '">￥'.
+        print '<td><a href="input.php?kakei_id='.
+               htmlentities($row['kakei_id']) . '">￥'.
                number_format(htmlentities($row['kingaku'])) .'</a></td>';
         print '<td>'. htmlentities($row['bikou']) .'</td>';
         print '</tr>';
