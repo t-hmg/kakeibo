@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>入力一覧</title>
+<title>一覧</title>
 <script type="text/javascript" src="./script/fixed_midashi.js"></script>
 <script type="text/javascript">
     window.onload = function () {FixedMidashi.create();};

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>家計簿</title>
+<title>入力</title>
 <script type="text/javascript">
   function switch_himoku_kubun(){
     var select = document.getElementById('txt_himoku')
