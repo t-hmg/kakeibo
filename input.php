@@ -270,6 +270,9 @@
 </table>
   <table id="tbl_2">
     <tr>
+      <td>
+        <button id="btn_register" class="g_btn_1" type="submit" name="action" value="register">登録</button>
+      </td>
       <?php
         if ($kakei_id != "0") {
           print '<td>';
@@ -277,9 +280,6 @@
           print '</td>';
         }
       ?>
-      <td>
-        <button id="btn_register" class="g_btn_1" type="submit" name="action" value="register">登録</button>
-      </td>
     </tr>
   </table>
   <?php
