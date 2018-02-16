@@ -89,7 +89,7 @@
 ?>
 <div id="contents">
 <div id="navi">
-  <a id="lnk_home" href="<?php print $home_url ?>">ＨＯＭＥ</a>
+  <a id="lnk_home" href="<?php print $_SESSION['home_url'] ?>">ＨＯＭＥ</a>
   <a id="lnk_logout" href="login.php">ログアウト</a>
 </div>
 <table id="tbl_1" class="g_tbl_1" style="float:left;" _fixedhead="rows:1; cols:0">
@@ -119,5 +119,13 @@
   ?>
 </table>
 </div>
+<?php
+  // 入力画面の登録（または削除）実行後の遷移先画面を設定する
+  $return_url = 'list.php?';
+  if ($himoku_kubun != '') {$return_url .= 'himoku_kubun=' . $himoku_kubun . '&';}
+  if ($himoku_id != '') {$return_url .= 'himoku_id=' . $himoku_id . '&';}
+  $return_url .= 'month=' . $month;
+  $_SESSION['return_url'] = $return_url;
+?>
 </body>
 </html>

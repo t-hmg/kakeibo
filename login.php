@@ -54,7 +54,7 @@
     // 家計画面へ遷移する
     if ($auth == true) {
       $_SESSION['user_id'] = $_POST['user_id'];
-      header("Location:" . $home_url); exit;
+      header('Location:total.php?month='. date("Y-m")); exit;
     }
 
   }

@@ -154,9 +154,9 @@
     }
 
     // 登録処理（もしくは削除処理）に成功した場合は
-    // 家計画面へ遷移する
+    // 遷移元の画面へ遷移する
     if ($error_msg == '') {
-      header("Location:" . $home_url); exit;
+      header("Location:" . $_SESSION['return_url']); exit;
     }
 
   } else {
@@ -227,7 +227,7 @@
 ?>
 <div id="contents">
 <div id="navi">
-  <a id="lnk_home" href="<?php print $home_url ?>">ＨＯＭＥ</a>
+  <a id="lnk_home" href="<?php print $_SESSION['home_url'] ?>">ＨＯＭＥ</a>
   <a id="lnk_logout" href="login.php">ログアウト</a>
 </div>
 <form name="frm_1" action="input.php" method="post">

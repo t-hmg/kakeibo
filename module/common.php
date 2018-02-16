@@ -1,6 +1,5 @@
 <?php
 
-$home_url = 'total.php?month='. date("Y-m");
 $weekday = array( "日", "月", "火", "水", "木", "金", "土" );
 
 function check_session() {

@@ -175,5 +175,11 @@
   ?>
 </table>
 </div>
+<?php
+  // 入力画面の登録（または削除）実行後の遷移先画面を設定する
+  $_SESSION['return_url'] = 'total.php?month=' . $month;
+  // ナビケーションバー［ＨＯＭＥ］押下時の遷移先画面を設定する
+  $_SESSION['home_url'] = 'total.php?month=' . $month;
+?>
 </body>
 </html>
