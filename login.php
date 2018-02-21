@@ -5,21 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ログイン</title>
 <link rel="stylesheet" type="text/css" href="./css/common.css">
-<style type="text/css">
-  #tbl_1 {
-    margin: 10px 10px 10px 10px;
-    height: 30px;}
-  #tbl_1 tr {
-    height: 50px;}
-  #tbl_1 td:nth-child(1) {
-    width: 90px;}
-  #txt_login, #txt_pwd {
-    width: 150px;}
-  #btn_login {
-     width: 160px; height: 40px;}
-  #lbl_message {
-    color: red ; font-weight: bold;}
-</style>
+<link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body>
 <?php

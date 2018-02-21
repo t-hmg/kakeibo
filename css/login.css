@@ -1,0 +1,13 @@
+#tbl_1 {
+  margin: 10px 10px 10px 10px;
+  height: 30px;}
+#tbl_1 tr {
+  height: 50px;}
+#tbl_1 td:nth-child(1) {
+  width: 90px;}
+#txt_login, #txt_pwd {
+  width: 150px;}
+#btn_login {
+   width: 160px; height: 40px;}
+#lbl_message {
+  color: red ; font-weight: bold;}

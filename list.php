@@ -9,21 +9,7 @@
     window.onload = function () {FixedMidashi.create();};
 </script>
 <link rel="stylesheet" type="text/css" href="./css/common.css">
-<style type="text/css">
-  #tbl_1 {margin-top:10px; width: 100%; table-layout: fixed;}
-  #tbl_1 th:nth-child(1) {width: 18%;}
-  #tbl_1 th:nth-child(2) {width: 6%;}
-  #tbl_1 td:nth-child(2) {text-align: center;}
-  #tbl_1 th:nth-child(3) {width: 20%;}
-  #tbl_1 th:nth-child(4) {width: 20%;}
-  #tbl_1 td:nth-child(4) {text-align: right;}
-  #date {text-align: center;}
-  #no_data {height: 40px; text-align: left;}
-  @media screen and (max-width:640px) {
-    #tbl_1 th:nth-child(2), #tbl_1 td:nth-child(2),
-    #tbl_1 th:nth-child(5), #tbl_1 td:nth-child(5) {display:none;}
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="./css/list.css">
 </head>
 <body>
 <?php

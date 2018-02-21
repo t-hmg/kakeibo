@@ -1,0 +1,30 @@
+.box_1 {
+  margin: 10px 0 10px 0; text-align: center;}
+.himoku_color {
+  width: 14px; height: 14px; margin-right: 5px; display: inline-block;}
+#lnk_prev, #lnk_next {
+  width: 40px; height: 25px; display: margin-top: 5px;
+  display: inline-block; text-decoration: none;}
+#lbl_month {
+  text-align: center; vertical-align: middle; margin: 0 10px 0 10px;
+  font-size: 20px;}
+#tbl_total {
+  text-align: center; display: inline-block;}
+#tbl_total td:nth-child(1), #tbl_total td:nth-child(3),
+#tbl_total td:nth-child(5) {
+  width: 115px;}
+#tbl_total td:nth-child(2), #tbl_total td:nth-child(4) {
+  width: 15px;}
+#graph_1, #graph_2 {
+  margin: 0 auto; margin-bottom: 5px;}
+#tbl_subtotal_1 tr td:nth-child(1), #tbl_subtotal_2 tr td:nth-child(1) {
+  width: 170px; text-align:left;}
+#tbl_subtotal_1 tr td:nth-child(2), #tbl_subtotal_2 tr td:nth-child(2) {
+  width: 170px; text-align:right;}
+#left_box, #right_box {
+  width: 350px; display: inline-block; margin-bottom: 20px;}
+@media screen and (min-width: 640px) {
+  #left_box, #right_box {
+    width: 48%;
+  }
+}

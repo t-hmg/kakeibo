@@ -1,0 +1,29 @@
+#tbl_1, #tbl_2 {
+  width: 350px;}
+#tbl_1 {
+  margin-top: 10px;}
+#tbl_2 {
+  margin-top: 5px;}
+#tbl_1 td {
+  padding: 5px 5px 5px 5px;}
+#tbl_1 tr td:nth-child(1) {
+  width: 70px; text-align: center; background:
+  linear-gradient(to left, #afafaf, #d1d1d1);}
+#rdo_income {
+  margin-left: 10px;}
+#rdo_expense {
+  margin-left: 25px;}
+#txt_date {
+  height: 20px; width: 150px;}
+#txt_himoku {
+  height: 32px; width: 162px;}
+#txt_kingaku {
+  height: 20px; width: 150px;}
+#txt_bikou {
+  height: 50px; width: 94%; vertical-align: middle;}
+#btn_register {
+  height: 40px; width: 100%;}
+#btn_delete {
+  height: 40px; width: 100%; color: red;}
+#lbl_error_msg {
+  margin: 8px 0 0 5px; color: red ; font-weight: bold;}
